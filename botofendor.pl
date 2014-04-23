@@ -158,7 +158,7 @@ sub process_message {
         when (/heretic/i) { @res = $self->heretic($message, $is_to_me) }
 # definition lookup went here...but it was too much work
 #        when (/^\?(.+)$/)      { @res = $self->get_def($message) }
-        when (/(Christ|he)\s+is\s+risen[\.!]?/) { @res = ('He is risen indeed!') }
+        when (/(Christ|he)\s+is\s+risen[\.!]?/i) { @res = ('He is risen indeed!') }
         default { }
     }
     @res;
